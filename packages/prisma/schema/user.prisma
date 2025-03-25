@@ -1,0 +1,15 @@
+model User {
+    id              String          @id @default(uuid()) @db.Uuid
+    name            String          @db.VarChar(100)
+    email           String          @unique @db.VarChar(255)
+    hash            String          @db.VarChar(255)
+    createdAt       DateTime        @default(now()) @map("created_at")
+    updatedAt       DateTime        @updatedAt @map("updated_at")
+    createdSpaces   Space[]         @relation("SpaceCreator")
+    createdSections Section[]       @relation("SectionCreator")
+    createdTasks    Task[]          @relation("TaskCreator")
+    spaces          Space[]
+    assignments     Assignment[]
+    usersSpaceRoles UserSpaceRole[]
+    Session         Session[]
+}

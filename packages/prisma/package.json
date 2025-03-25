@@ -1,0 +1,28 @@
+{
+  "name": "@repo/prisma",
+  "version": "1.0.0",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "scripts": {
+    "generate": "npx prisma generate --schema=./schema",
+    "push": "npx prisma db push --schema=./schema",
+    "studio": "npx prisma studio --schema=./schema",
+    "prebuild": "pnpm run generate",
+    "predev": "pnpm run generate",
+    "format": "npx prisma format --schema=./schema"
+  },
+  "dependencies": {
+    "@prisma/client": "6.2.1"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^22.10.7",
+    "prisma": "^6.2.1",
+    "typescript": "5.7.3"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

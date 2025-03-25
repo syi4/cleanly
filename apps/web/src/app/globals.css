@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+  --font-sans: montserrat, sans-serif;
+  --font-serif: merriweather, serif;
+
+  --main: light-dark(oklch(99% 0 0), oklch(14.45% 0 0));
+  --main-inverse: light-dark(oklch(14.45% 0 0), oklch(99% 0 0));
+
+  --text-default: light-dark(
+    oklch(20.37% 0.0132 233.32),
+    oklch(94.56% 0.0017 247.84)
+  );
+
+  --focus-ring: oklch(48.37% 0.2176 274.61);
+
+  --text-grey: oklch(55.17% 0.0138 285.94);
+
+  --button-blue: oklch(56.71% 0.209478 257.9477);
+  --button-purple: oklch(48.78% 0.2255 300.51);
+
+  /* --icon-pink: oklch(71.01% 0.2456 341.35);
+  --icon-brown: oklch(50% 0.12 50);
+  --icon-teal: oklch(71.01% 0.2456 210);
+  --icon-green: oklch(71.01% 0.28 155);
+  --icon-blue: oklch(71.01% 0.28 270);
+  
+  --icon-purple: oklch(71.01% 0.2456 341.35);
+  --icon-purple-bg: oklch(26.42% 0.11 302.06 / 80%);
+  --icon-orange: oklch(71.01% 0.28 60);
+  --icon-yellow: oklch(87.7% 0.0789 81.61);
+  --icon-grey: oklch(80% 0.01 270);
+  
+  --card-pink: oklch(95% 0.04 340);
+  --card-brown: oklch(95% 0.07 30);
+  --card-teal: oklch(95% 0.05 180);
+  --card-green: oklch(96.94% 0.0385 143.83);
+  --card-blue: oklch(95.06% 0.0269 236.75);
+  --card-purple: oklch(95% 0.03 306.38);
+  --card-orange: oklch(94.76% 0.03 64.1726);
+  --card-yellow: oklch(96.36% 0.0353 97.08);
+  --card-grey: oklch(93% 0.02 270); */
+
+  --icon-blue: light-dark(oklch(50% 0.18 240), oklch(71% 0.25 250));
+  --icon-blue-bg: light-dark(oklch(90% 0.05 250), oklch(26% 0.11 220 / 80%));
+
+  --muted: light-dark(oklch(50.19% 0.0129 286.07), oklch(71.19% 0.0129 286.07));
+  --accent: light-dark(oklch(50.19% 0.0129 286.07), oklch(71.19% 0.0129 286.07));
+
+  --highlight: light-dark(oklch(96% 0.0013 286.38), oklch(23% 0.0055 286.03));
+
+  --error: light-dark(oklch(47.76% 0.1929 23.59), oklch(63.96% 0.1336 10.23));
+
+  --border-p: light-dark(
+    oklch(91.97% 0.004 286.32),
+    oklch(27.41% 0.0055 286.03)
+  );
+
+  --card-hover: light-dark(
+    oklch(96% 0.0119 231.66),
+    oklch(21.03% 0.0059 285.89)
+  );
+
+  --sidebar-width: 200px;
+  --sidebar-width-collapsed: 50px;
+}
+
+body {
+  background-color: var(--main);
+  color: var(--text-default);
+}

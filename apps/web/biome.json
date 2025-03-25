@@ -1,0 +1,44 @@
+{
+  "extends": ["../../biome.json"],
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "jsxQuoteStyle": "single",
+      "trailingCommas": "es5",
+      "semicolons": "always",
+      "arrowParentheses": "always"
+    }
+  },
+  "linter": {
+    "rules": {
+      "a11y": {
+        "recommended": true,
+        "useButtonType": "error",
+        "useKeyWithClickEvents": "error",
+        "useValidAnchor": "error"
+      },
+      "security": {
+        "recommended": true,
+        "noDangerouslySetInnerHtml": "error"
+      },
+      "suspicious": {
+        "noArrayIndexKey": "error",
+        "noExplicitAny": "error"
+      },
+      "style": {
+        "useNodejsImportProtocol": "off",
+        "noDefaultExport": "off",
+        "noNonNullAssertion": "error",
+        "useImportType": "error",
+        "useConsistentArrayType": "error"
+      },
+      "correctness": {
+        "noUnusedImports": "warn",
+        "noUnusedVariables": "warn"
+      }
+    }
+  },
+  "files": {
+    "ignore": ["public", "next-env.d.ts"]
+  }
+}
